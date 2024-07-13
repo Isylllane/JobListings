@@ -12,7 +12,7 @@ export default defineConfig({
     port: 5734,
     proxy: {
       '/api': {
-        target: 'http://localhost:8000',
+        target: 'https://crudcrud.com/api/35e4605efb554b59bf619f8e028c9322',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ''),
       }
