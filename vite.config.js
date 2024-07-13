@@ -12,7 +12,7 @@ export default defineConfig({
     port: 5734,
     proxy: {
       '/api': {
-        target: 'https://crudcrud.com/api/17468d56974e4a71a30b6d20b1969c27/',
+        target: 'https://crudcrud.com/api/35e4605efb554b59bf619f8e028c9322/',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ''),
       }
