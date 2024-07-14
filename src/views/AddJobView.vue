@@ -41,7 +41,7 @@ const handleSubmit = async () => {
   };
 
   try {
-    const response = await axios.post('https://crudcrud.com/api/5d0cdd24e7694f1a8f83d1d1451f0172/jobs/', newJob);
+    const response = await axios.post('/api/jobs/', newJob);
     toast.success('Job Added Successfully');
     router.push(`/jobs/${response.data._id}`);
   } catch (error) {
