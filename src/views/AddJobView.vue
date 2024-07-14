@@ -41,9 +41,9 @@ const handleSubmit = async () => {
   };
 
   try {
-    const response = await axios.post('https://crudcrud.com/api/556b3c1e9ee247c4acc4b4da40697917/jobs/', newJob);
+    const response = await axios.post('/api/jobs', newJob);
     toast.success('Job Added Successfully');
-    router.push(`/jobs/${response.data._id}`);
+    router.push(`/jobs/${response.data.id}`);
   } catch (error) {
     console.error('Error fetching job', error);
     toast.error('Job Was Not Added');

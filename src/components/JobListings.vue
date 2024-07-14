@@ -1,4 +1,5 @@
 <script setup>
+
 import JobListing from '@/components/JobListing.vue'
 import { defineProps, onMounted, reactive } from 'vue';
 import { RouterLink } from 'vue-router';    
@@ -12,7 +13,6 @@ defineProps({
         default: false
     }
 });
-
 const state = reactive({
   jobs: [],
   isLoading: true,
