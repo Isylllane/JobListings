@@ -12,7 +12,7 @@ export default defineConfig({
     port: 5734,
     proxy: {
       '/api': {
-        target: 'https://crudcrud.com/api/5d0cdd24e7694f1a8f83d1d1451f0172',
+        target: 'https://vue-jobs-listings.free.beeceptor.com/api',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ''),
       }
