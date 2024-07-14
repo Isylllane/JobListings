@@ -21,7 +21,7 @@ const deleteJob = async () => {
   try {
     const confirm = window.confirm('Are you sure you want to delete this job?');
     if (confirm) {
-      await axios.delete(`/api/jobs/${jobId}`);
+      await axios.delete(`${jobId}`);
       toast.success('Job Deleted Successfully');
       router.push('/jobs');
     }

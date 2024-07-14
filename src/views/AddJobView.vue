@@ -20,8 +20,13 @@ const form = reactive({
 
 const toast = useToast();
 
+// const generateUniqueId = async () => {
+//     return Math.floor(Math.random() *100000)
+//   }
+
 const handleSubmit = async () => {
   const newJob = {
+    id: Math.floor(Math.random() *100000),
     title: form.title,
     type: form.type,
     location: form.location,
@@ -36,9 +41,9 @@ const handleSubmit = async () => {
   };
 
   try {
-    const response = await axios.post('https://crudcrud.com/api/17468d56974e4a71a30b6d20b1969c27/jobs/', newJob);
+    const response = await axios.post('/api/jobs/', newJob);
     toast.success('Job Added Successfully');
-    router.push(`/jobs/${response.data.id}`);
+    router.push(`/jobs/${response.data._id}`);
   } catch (error) {
     console.error('Error fetching job', error);
     toast.error('Job Was Not Added');

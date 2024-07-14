@@ -44,7 +44,7 @@ const handleSubmit = async () => {
         },
     };
 try {
-    const response = await axios.put(`/api/jobs/${jobId}`, updateJob);
+    const response = await axios.put(`api/jobs/${jobId}`, updateJob);
     // уведомление
     toast.success('Job Updated Successfully');
     router.push(`/jobs/${response.data.id}`)
@@ -57,7 +57,7 @@ catch (error) {
 };
 onMounted(async () => {
     try {
-        const response = await axios.get(`/api/jobs/${jobId}`);
+        const response = await axios.get(`api/jobs/${jobId}`);
         state.job = response.data;
         // Заполнение входных данных
         form.type = state.job.type;
