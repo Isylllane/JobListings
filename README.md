@@ -1,6 +1,13 @@
 # vue-job-listings
+An Job Listings app built with Vue 3 (composition API), Vite and Tailwind.
 
-This template should help get you started developing with Vue 3 in Vite.
+- Add, remove and edit jobs
+- Save data to JSON-Server
+- [Vue Toastification](https://github.com/Maronato/vue-toastification) for notifications
+- [Json-server](https://www.npmjs.com/package/json-server) for mock backend
+- `<script setup>` syntax (Vue 3.2+)
+
+This project uses JSON-Server for a mock backend.
 
 ## Recommended IDE Setup
 
@@ -15,6 +22,13 @@ See [Vite Configuration Reference](https://vitejs.dev/config/).
 ```sh
 npm install
 ```
+
+### Running local json server
+
+```sh
+npm run server
+```
+
 
 ### Compile and Hot-Reload for Development
 
